@@ -1,0 +1,23 @@
+# Slow Digest configuration — copy to config.toml and edit.
+
+# Feeds to read overnight (RSS or Atom).
+feeds = [
+  "https://news.ycombinator.com/rss",
+  "https://dev.to/feed",
+  "https://github.blog/feed/",
+]
+
+# Local model served by Ollama (https://ollama.com), or "heuristic"
+# to use the built-in scorer with no model at all.
+model = "qwen2.5:3b"
+ollama_url = "http://localhost:11434"
+
+# The push budget: how much of your morning this tool may claim.
+daily_budget = 5
+weekend_budget = 15
+
+# What you actually care about — used by both scorers.
+interests = ["open source", "python", "local ai", "privacy"]
+ignore_keywords = ["celebrity", "giveaway"]
+
+data_dir = "data"
